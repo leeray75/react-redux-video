@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import reducer from './reducers'
+import reducer from './chapters-reducers'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'

@@ -8,13 +8,43 @@ import Chapters from './chapters';
 import 'styles/app.scss';
 
 const config = {
-      autoplay: true,
-      debug: false,
-      media : {
-        title : "Inline Playback",
-        source : [{"src":"//webmd-vh.akamaihd.net/i/delivery/delivery/6b/4e/6b4efcc7-2cb0-4689-b55b-815db8c7a518/ACC_2016_Sizzle_033016_,1000k,400k,750k,2500k,3000k,.mp4.csmil/master.m3u8","type":"application/x-mpegURL"},{"src":"//webmd-vh.akamaihd.net/z/delivery/delivery/6b/4e/6b4efcc7-2cb0-4689-b55b-815db8c7a518/ACC_2016_Sizzle_033016_,1000k,400k,750k,2500k,3000k,.mp4.csmil/manifest.f4m","type":"video/f4m"},{"src":"//webmd-a.akamaihd.net/delivery/delivery/6b/4e/6b4efcc7-2cb0-4689-b55b-815db8c7a518/ACC_2016_Sizzle_033016_750k.mp4","type":"video/mp4"}]
+    paths:{
+      "player": "/amp-premier/amp.premier/",
+      "resources": "/amp-premier/resources/"
+    },
+    resources:[],
+    plugins:{
+      react:{
+        resources:[
+          {src: "https://unpkg.com/react@15/dist/react.min.js", debug: "https://unpkg.com/react@15/dist/react.js", type: "text/javascript"},
+          {src: "https://unpkg.com/react-dom@15/dist/react-dom.min.js", debug: "https://unpkg.com/react-dom@15/dist/react-dom.js", type: "text/javascript"},
+          {src: "https://unpkg.com/prop-types/prop-types.min.js", debug: "https://unpkg.com/prop-types/prop-types.min.js", type: "text/javascript"},
+          {src: "/amp-premier/akamai/amp/react/React.min.css", debug: "../akamai/amp/react/React.css", type: "text/css"},
+          {src: "/amp-premier/akamai/amp/react/React.min.js", debug: "../akamai/amp/react/React.js", type: "text/javascript"}
+        ],
+        autoHide: 3
       }
-    }
+    },
+      controls: {
+        mode: 'auto'
+      },
+          autoplay: true,
+          playsinline: true,
+          mode: 'html',
+          muted: true,
+          media : {
+            title : "Inline Playback",
+            poster : '/amp-premier/resources/images/hd_world.jpg',
+            source : [{
+              src : "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m",
+              type : "video/f4m"
+            }, {
+              src : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8",
+              type : "application/x-mpegURL"
+            }]
+          }
+        };
+
 const chapters = [
 	{
 		startTime: 0,

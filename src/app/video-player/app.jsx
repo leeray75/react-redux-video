@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import reducer from './reducers'
+import reducer from './video-reducers'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as VideoActions from './actions/video-actions'
+import * as Actions from './video-actions'
 import Video from './components/video';
 import 'styles/video-player.scss';
 
@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => {
-	let bindActions = bindActionCreators(VideoActions, dispatch);
+	let bindActions = bindActionCreators(Actions, dispatch);
 	console.log("bindActions",bindActions);
 	return {
 	  actions: bindActions

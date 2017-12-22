@@ -25,7 +25,7 @@ module.exports = {
       alias: {
         app: path.resolve(__dirname, "src/app"),
         npm: path.resolve(__dirname, 'node_modules'),
-        amp: path.resolve(__dirname, "amp-premier"),
+        amp: path.resolve(__dirname, "public/amp-premier"),
         styles: path.resolve(__dirname, "src/styles"),
         images: path.resolve(__dirname, "src/images")
       }
@@ -52,7 +52,7 @@ module.exports = {
     },
     devtool: "source-map",
     devServer: {
-      host: 'localhost.medscape.com',
+      host: 'localhost',
       port: 8080
   }
 };

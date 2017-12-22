@@ -1,6 +1,7 @@
 import MedscapeConfig from 'app/config';
 const imageServer = MedscapeConfig.imageServer;
 const AmpConfig = {
+      debug: true,
       autoplay: false,
       playsinline: true,
       mode: 'html',

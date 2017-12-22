@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import reducers from 'app/video-player/reducers/video-reducer'
+import reducers from './video-reducers'
 const VideoStore = createStore(reducers);
 export default VideoStore;
 

@@ -22,6 +22,7 @@ export default class VideoComponent extends Component {
   }
   componentWillUpdate(nextProps,nextState){
     console.log("Video Will Update",nextProps);
+    console.log("Test:",nextProps.setTime!=this.props.setTime);
     if(this.amp!=null && nextProps.setTime!=this.props.setTime){
       this.amp.setCurrentTime(nextProps.setTime);
     }
@@ -39,7 +40,7 @@ export default class VideoComponent extends Component {
     }
     let $this = $(ReactDOM.findDOMNode(this));
     $this.append(akamaiContainer);
-    let config = $.extend(true,{},AmpConfig,this.props.config);
+    let config = this.props.config;
     console.log("config:",config);
     window.amp = window.akamai.amp.AMP.create(akamaiId, config, this.initListeners.bind(this));
     this.amp = window.amp;

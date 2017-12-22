@@ -1,20 +1,20 @@
-import * as Actions from 'app/video-player/actions/video-action-types'
+import * as Actions from './video-action-types'
 import VideoState from './video-state';
 import $ from 'jquery'
 
 function VideoReducers(state = VideoState, action) {
-  console.log("Chapters Reducers",action);
-  let nextState = $.extend(true,{},state);
-  if(actions.event){
-    nextState.event = actions.event;
-    nextState.amp = actions.amp;
+  let nextState = Object.assign({},state);
+  if(action.event){
+    nextState.event = action.event;
+    nextState.amp = action.amp;
   }
   switch (action.type) {
     case Actions.SET_MEDIA:
+      console.log("Setting Config");
       nextState.config=action.config;
       break;
     case Actions.TIME_UPDATE:
-      nextState.currentTime = actions.amp.getCurrentTime();
+      nextState.currentTime = action.amp.getCurrentTime();
       break;
     case Actions.SET_CURRENT_TIME:
       nextState.setTime=action.setTime;
@@ -22,10 +22,10 @@ function VideoReducers(state = VideoState, action) {
     default:
       
   }
-  console.log("Next State:",nextState);
+  
   return nextState;
 }
 
 
 
-export default ChaptersReducers
+export default VideoReducers
