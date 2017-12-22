@@ -1,0 +1,9 @@
+import 'react';
+import 'prop-types';
+import 'react-redux';
+import 'react-dom';
+import 'redux'
+import 'classnames';
+import 'jquery';
+import 'script-loader!amp/resources/js/hls.js';
+import 'script-loader!amp/amp.premier/amp.premier.js';

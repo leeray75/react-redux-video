@@ -1,0 +1,30 @@
+.chapters-module{
+	.chapters-component{
+		ul{
+
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			widith: 100%;
+			display: flex;
+			flex-direction: row;
+			> li.chapter-item{
+				display: block;
+				width: 25%;
+				padding: 10px;
+				.chapter-title{
+					font-weight: bold;
+					font-size: 20px;
+				}
+				.chapter-time{
+					font-size: 16px;
+				}
+				&.active{
+					.chapter-title{
+						color: #f00;
+					}
+				}
+			}
+		}
+	}
+}
