@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
-import ChapterItem from './chapter-item-component'
+import ChapterItem from './chapter-item'
 
 export default class ChaptersComponent extends Component {
   constructor(props){
@@ -11,7 +11,6 @@ export default class ChaptersComponent extends Component {
 
   
   shouldComponentUpdate(nextProps,nextState){
-    console.log("should update:",nextProps,nextState);
     return true;
   }
 

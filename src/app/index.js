@@ -22,43 +22,48 @@ const config = {
           {src: "/amp-premier/akamai/amp/react/React.min.css", debug: "../akamai/amp/react/React.css", type: "text/css"},
           {src: "/amp-premier/akamai/amp/react/React.min.js", debug: "../akamai/amp/react/React.js", type: "text/javascript"}
         ],
-        autoHide: 3
+        native: false
       }
     },
-      controls: {
-        mode: 'auto'
-      },
-          autoplay: true,
-          playsinline: true,
-          mode: 'html',
-          muted: true,
-          media : {
-            title : "Inline Playback",
-            poster : '/amp-premier/resources/images/hd_world.jpg',
-            source : [{
-              src : "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m",
-              type : "video/f4m"
-            }, {
-              src : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8",
-              type : "application/x-mpegURL"
-            }]
-          }
-        };
+    controls: {
+      enabled: false,
+      mode: 'none'
+    },
+    autoplay: false,
+    playsinline: true,
+    mode: 'html',
+    muted: true,
+    media : {
+      title : "Inline Playback",
+      poster : '/amp-premier/resources/images/hd_world.jpg',
+      source : [{
+        src : "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m",
+        type : "video/f4m"
+      }, {
+        src : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8",
+        type : "application/x-mpegURL"
+      }]
+    }
+  };
 
 const chapters = [
 	{
 		startTime: 0,
-		title: "Chapter 1"
+		title: "Chapter 1",
+    thumbnail: ""
 	},
 	{
 		startTime: 60,
-		title: "Chapter 2"
+		title: "Chapter 2",
+    thumnail: ""
 	}
 ]
 render(
   <main>
-  <VideoPlayer config={config} />
-  <Chapters chapters={chapters} />
+    <div id="player-container">
+      <VideoPlayer config={config} />
+      <Chapters chapters={chapters} />
+    </div>
   </main>,
   document.getElementById('root')
 )

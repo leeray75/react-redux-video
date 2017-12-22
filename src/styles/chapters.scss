@@ -1,27 +1,45 @@
 .chapters-module{
+	width: 100%;
 	.chapters-component{
 		ul{
 
 			list-style: none;
 			padding: 0;
 			margin: 0;
-			widith: 100%;
+			width: 100%;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			> li.chapter-item{
 				display: block;
-				width: 25%;
+				width: 100%;
 				padding: 10px;
-				.chapter-title{
-					font-weight: bold;
-					font-size: 20px;
-				}
-				.chapter-time{
-					font-size: 16px;
-				}
-				&.active{
+				a{
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					padding: 10px;
+					border: 1px sold #000;
+					border-radius: 5px;
+					background-color: #ccc;
+					cursor: pointer;
 					.chapter-title{
-						color: #f00;
+						width: 75%;
+						font-weight: bold;
+						font-size: 20px;
+					}
+					.chapter-time{
+						width: 25%;
+						text-align: right;
+						font-size: 16px;
+					}
+				}
+
+				&.active{
+					a{
+						background-color: #999;
+						.chapter-title{
+							color: #f00;
+						}
 					}
 				}
 			}

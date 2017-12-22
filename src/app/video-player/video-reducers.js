@@ -1,6 +1,5 @@
 import * as Actions from './video-action-types'
 import VideoState from './video-state';
-import $ from 'jquery'
 
 function VideoReducers(state = VideoState, action) {
   let nextState = Object.assign({},state);
@@ -10,7 +9,6 @@ function VideoReducers(state = VideoState, action) {
   }
   switch (action.type) {
     case Actions.SET_MEDIA:
-      console.log("Setting Config");
       nextState.config=action.config;
       break;
     case Actions.TIME_UPDATE:

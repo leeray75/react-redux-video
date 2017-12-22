@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as ChapterActions from './chapters-actions'
-import ChaptersList from './chapters-list-component';
+import ChaptersList from './components/chapters-list';
 
 const Chapters = (props) => {
 	const {config,actions} = props;
