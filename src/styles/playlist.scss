@@ -1,0 +1,53 @@
+.playlist-module{
+	width: 100%;
+	margin-top: 20px;
+	.playlist{
+		.playlist-component{
+			ul{
+				list-style: none;
+				display: flex;
+				flex-direction: row;
+				li{
+					display: block;
+					width: 25%;
+					padding: 10px;
+					&.active{
+						a{
+							border-color: #00f;
+							.video-title{
+								color: #00f;
+								font-weight: bold;
+							}
+						}
+					}
+					a{
+						display: block;
+						width: 100%;
+						border: 2px solid #000;
+						border-radius: 5px;
+						padding: 10px;
+						position: relative;
+						height: 1px;
+						cursor: pointer;
+						background-repeat: no-repeat;
+						background-size: cover;
+						padding-bottom: 55.6%;
+						opacity: 1;
+						&:hover{
+							opacity: .8;
+						}
+						.video-title{
+							background-color: #fff;
+							padding: 3px;
+							text-align: center;
+							position: absolute;
+							bottom: 3px;
+							left: 5px;
+							right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}	
+}

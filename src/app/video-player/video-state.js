@@ -1,4 +1,5 @@
 const VideoState = {
+  actionType: '',
   event: null,
   amp: null,
   config: null,
@@ -11,7 +12,9 @@ const VideoState = {
   seeking: false,
   stalled: false,
   volume: 0,
-  waiting: false
+  waiting: false,
+  ended: false,
+  hasMedia: false
 }
 
 export default VideoState;

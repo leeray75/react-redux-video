@@ -52,7 +52,8 @@ module.exports = {
     },
     devtool: "source-map",
     devServer: {
-      host: 'localhost',
+      disableHostCheck: true,
+      host: 'localhost.medscape.com',
       port: 8080
   }
 };

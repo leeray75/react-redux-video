@@ -1,0 +1,63 @@
+{
+	"videos":[
+	{
+		"amp":{
+		   "debug": false,
+		   "paths": {
+		      "player": "/amp-premier/amp.premier/",
+		      "resources": "/amp-premier/resources/"
+		   },
+		   "resources": [],
+		   "controls": {
+		      "enabled": true
+		   },
+		   "autoplay": false,
+		   "playsinline": true,
+		   "mode": "html",
+		   "muted": true,
+		   "media": {
+		      "title": "Inline Playback",
+		      "poster": "/amp-premier/resources/images/hd_world.jpg",
+		      "source": [
+		         {
+		            "src": "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m",
+		            "type": "video/f4m"
+		         },
+		         {
+		            "src": "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8",
+		            "type": "application/x-mpegURL"
+		         }
+		      ]
+		   }
+		},
+		"chapters":[
+		   {
+		      "startTime": 0,
+		      "title": "Chapter 1",
+		      "thumbnail": ""
+		   },
+		   {
+		      "startTime": 60,
+		      "title": "Chapter 2",
+		      "thumnail": ""
+		   }
+		]
+	},
+	{
+		"amp": {
+			"media":{
+				"title": "HLS Sample 2",
+				"poster": "/amp-premier/resources/images/hd_world.jpg",
+				"source": [
+					{
+						"src": "http://transdemohls-vh.akamaihd.net/i/XYZCorpMedia/delivery/5bcc3b38-f482-4b01-8bab-a665efc666e2/,Art-of-Flight_Clip-3_1000k.mp4,Art-of-Flight_Clip-3_2500k.mp4,Art-of-Flight_Clip-3_300k.mp4,Art-of-Flight_Clip-3_1500k.mp4,Art-of-Flight_Clip-3_600k.mp4,Art-of-Flight_Clip-3_800k.mp4,Art-of-Flight_Clip-3_200k.mp4,.csmil/master.m3u8", 
+						"type": "application/x-mpegURL"
+					}
+				]
+			}
+		},
+		"chapters":[]
+	}
+	]
+
+}

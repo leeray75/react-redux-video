@@ -21,9 +21,12 @@ export const suspend= (e,amp)=>({ type: types.SUSPEND,  event: e, amp: amp})
 export const timeupdate = (e,amp)=>({ type: types.TIME_UPDATE,  event: e, amp: amp})
 export const volumechange = (e,amp)=>({ type: types.VOLUME_CHANGE,  event: e, amp: amp})
 export const waiting = (e,amp)=>({ type: types.WAITING,  event: e, amp: amp})
-export const setMedia = (config)=>{
-	return {type: types.SET_MEDIA, config: config}
+export const setMedia = (config,hasMedia=false)=>{
+	return {type: types.SET_MEDIA, config: config, hasMedia: hasMedia}
 }
 export const setCurrentTime = (time)=>{
 	return {type: types.SET_CURRENT_TIME, setTime: time}
+}
+export const setVideo = (video)=>{
+	return {type: types.SET_VIDEO, video: video}
 }

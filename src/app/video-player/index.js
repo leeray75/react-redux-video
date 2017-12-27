@@ -8,7 +8,7 @@ import VideoStore from './video-store';
 const Module = (props)=>{
   console.log("Video Module:",props);
   if(props.config!=null){
-    VideoStore.dispatch(VideoActions.setMedia(props.config));
+    VideoStore.dispatch(VideoActions.setVideo(props.config));
   }
   return (
     <section className="video-player-module">

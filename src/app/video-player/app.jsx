@@ -14,14 +14,15 @@ const VideoPlayer = (props) => {
 	const {config,actions} = props;
 	return(
 	  <section className="video-player">
-	    <Video config={config} setTime={props.setTime} actions={actions} />
+	    <Video config={config} setTime={props.setTime} actions={actions} hasMedia={props.hasMedia}/>
 	  </section>
 	)
 }
 
 const mapStateToProps = state => ({
   config: state.config,
-  setTime: state.setTime
+  setTime: state.setTime,
+  hasMedia: state.hasMedia
 })
 
 const mapDispatchToProps = dispatch => {
