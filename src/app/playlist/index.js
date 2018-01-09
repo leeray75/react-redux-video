@@ -31,12 +31,15 @@ const changeVideo = function(video){
 VideoStore.subscribe(()=>{
   const videoState = VideoStore.getState();
   const playlistState = PlaylistStore.getState();
+  console.log("videoState config:",videoState.config);
   if(videoState.actionType == VideoActionTypes.SET_VIDEO){
     PlaylistStore.dispatch(PlaylistActions.setCurrentVideo(videoState.config));
   }
-  else if(videoState.ended){
+  else if(videoState.actionType == VideoActionTypes.ENDED){
+    console.log("Video Ended:",videoState.config);
     const activeIndex = playlistState.videos.findIndex((video)=>{
-      return video.active;
+
+      return video.amp.media.source[0].src==videoState.config.media.source[0].src;
     })
     const nextIndex = activeIndex+1;
     if(nextIndex<playlistState.videos.length){

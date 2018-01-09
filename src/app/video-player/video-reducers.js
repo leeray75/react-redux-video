@@ -12,10 +12,6 @@ function VideoReducers(state = VideoState, action) {
       if(action.hasMedia==true){
         nextState.hasMedia = true;
       }
-      else{
-        nextState = Object.assign({},VideoState);
-        nextState.config=action.config;
-      }
       break;
     case Actions.TIME_UPDATE:
       nextState.currentTime = action.amp.getCurrentTime();
